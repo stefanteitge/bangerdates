@@ -13,4 +13,4 @@ Open [http://localhost:3000/bangerdates](http://localhost:3000) with your browse
 
 ## Deployment
 
-It is continously deployed to [https://stefanteitge.github.io/bangerdates/](...).
+It is continously deployed to [https://stefanteitge.github.io/bangerdates/](https://stefanteitge.github.io/bangerdates/).
