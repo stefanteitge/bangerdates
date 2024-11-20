@@ -1,4 +1,4 @@
-import { expandClassTag } from '@/app/lib/classes';
+import { expandClassTag, getClassColor } from '@/app/lib/classes';
 import { listArchivedRaceDays, listUpcomingRaceDays, RaceDay, RaceMeeting } from '@/app/lib/dates';
 import { getFlagCode } from '@/app/lib/locations';
 import { addBasePath } from 'next/dist/client/add-base-path';
@@ -16,13 +16,13 @@ function MyRaceMeeting({ race }: MyDateProps) {
   return (
     <div>
       <Image
-        className="inline"
+        className="mr-0.5 inline"
         src={addBasePath('/flags/' + getFlagCode(race.location) + '.svg')}
-        width={20}
-        height={20}
-        alt="Picture of the author"
+        width={24}
+        height={24}
+        alt="Flag"
       />{' '}
-      {race.location}{' '}
+      <div className="inline-block min-w-24">{race.location} </div>
       {race.classes.map((c) => (
         <Badge text={c} key={c} />
       ))}
@@ -30,17 +30,27 @@ function MyRaceMeeting({ race }: MyDateProps) {
   );
 }
 
-function MyRaceDay({ day }: MyRaceDayProps) {
-  return day.races.length == 0 ? (
-    <div className="italic">No races announced yet.</div>
-  ) : (
-    day.races.map((r) => <MyRaceMeeting key={r.location} race={r} />)
+function MyRaceDayRow({ day }: MyRaceDayProps) {
+  return (
+    <tr key={day.date.toLocaleString()}>
+      <td className="border p-2">{day.date.toLocaleString()}</td>
+      <td className="space-y-2 border p-2">
+        {day.races.length == 0 ? (
+          <div className="italic text-gray-600">No races announced yet.</div>
+        ) : (
+          day.races.map((r) => <MyRaceMeeting key={r.location} race={r} />)
+        )}
+      </td>
+      <td className="border p-2">{day.date.dayOfWeek == 6 ? 'Saturday' : ''}</td>
+    </tr>
   );
 }
 
 function Badge({ text }: { text: string }) {
   return (
-    <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
+    <span
+      className={`${getClassColor(text)} ml-2 inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-500/10`}
+    >
       {expandClassTag(text)}
     </span>
   );
@@ -58,13 +68,7 @@ function RaceTable({ days }: { days: RaceDay[] }) {
       </thead>
       <tbody>
         {days.map((d) => (
-          <tr key={d.date.toLocaleString()}>
-            <td className="border p-2">{d.date.toLocaleString()}</td>
-            <td className="space-y-2 border p-2">
-              <MyRaceDay day={d} />
-            </td>
-            <td className="border p-2">{d.date.dayOfWeek == 6 ? 'Saturday' : ''}</td>
-          </tr>
+          <MyRaceDayRow key={d.date.toString()} day={d} />
         ))}
       </tbody>
     </table>
@@ -73,10 +77,10 @@ function RaceTable({ days }: { days: RaceDay[] }) {
 
 export default function Home() {
   return (
-    <div className="items-top grid min-h-screen grid-rows-[20px_1fr_20px] justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-8 sm:items-start">
+    <div className="items-top grid min-h-screen grid-rows-[20px_1fr_20px] justify-items-center gap-0 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
+      <main className="row-start-2 flex flex-col items-center gap-4 sm:items-start">
         <h1 className="text-5xl font-extrabold">Banger dates </h1>
-        <div className="text-2xl italic text-neutral-500">Belgium & Netherlands</div>
+        <div className="mb-4 text-2xl italic text-neutral-500">Belgium & Netherlands</div>
         <h2 className="text-3xl font-extrabold">Upcoming races</h2>
         <RaceTable days={listUpcomingRaceDays()} />
         <h2 className="text-3xl font-extrabold">Archived races</h2>
