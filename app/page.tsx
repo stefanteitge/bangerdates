@@ -33,15 +33,15 @@ function MyRaceMeeting({ race }: MyDateProps) {
 function MyRaceDayRow({ day }: MyRaceDayProps) {
   return (
     <tr key={day.date.toLocaleString()}>
-      <td className="border p-2">{day.date.toLocaleString()}</td>
-      <td className="space-y-2 border p-2">
+      <td className="border bg-slate-50 p-2">{day.date.toLocaleString()}</td>
+      <td className="space-y-2 border bg-slate-50 p-2">
         {day.races.length == 0 ? (
           <div className="italic text-gray-600">No races announced yet.</div>
         ) : (
           day.races.map((r) => <MyRaceMeeting key={r.location} race={r} />)
         )}
       </td>
-      <td className="border p-2">{day.date.dayOfWeek == 6 ? 'Saturday' : ''}</td>
+      <td className="border bg-slate-50 p-2">{day.date.dayOfWeek == 6 ? 'Saturday' : ''}</td>
     </tr>
   );
 }
@@ -61,9 +61,9 @@ function RaceTable({ days }: { days: RaceDay[] }) {
     <table className="table-auto border-collapse">
       <thead>
         <tr>
-          <th className="border bg-slate-200 p-2">Date</th>
-          <th className="border bg-slate-200 p-2">Races</th>
-          <th className="border bg-slate-200 p-2">Info</th>
+          <th className="border bg-slate-300 p-2">Date</th>
+          <th className="border bg-slate-300 p-2">Races</th>
+          <th className="border bg-slate-300 p-2">Info</th>
         </tr>
       </thead>
       <tbody>
@@ -86,8 +86,10 @@ export default function Home() {
         <h2 className="text-3xl font-extrabold">Archived races</h2>
         <RaceTable days={listArchivedRaceDays()} />
       </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
-        Just banger dates. And maybe some stock car dates too.
+      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-8 text-slate-600">
+        <span>Made by Stefan Teitge</span>
+        <span>2024</span>
+        <a href="https://github.com/stefanteitge/bangerdates">Contribute at Github</a>
       </footer>
     </div>
   );
