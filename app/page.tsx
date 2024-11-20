@@ -1,19 +1,29 @@
 import { expandClassTag } from '@/app/lib/classes';
 import { listArchivedRaceDays, listUpcomingRaceDays, RaceDay, RaceMeeting } from '@/app/lib/dates';
+import { getFlagCode } from '@/app/lib/locations';
+import { addBasePath } from 'next/dist/client/add-base-path';
+import Image from 'next/image';
 
 interface MyDateProps {
-  meeting: RaceMeeting;
+  race: RaceMeeting;
 }
 
 interface MyRaceDayProps {
   day: RaceDay;
 }
 
-function MyRaceMeeting({ meeting }: MyDateProps) {
+function MyRaceMeeting({ race }: MyDateProps) {
   return (
     <div>
-      {meeting.location}{' '}
-      {meeting.classes.map((c) => (
+      <Image
+        className="inline"
+        src={addBasePath('/flags/' + getFlagCode(race.location) + '.svg')}
+        width={20}
+        height={20}
+        alt="Picture of the author"
+      />{' '}
+      {race.location}{' '}
+      {race.classes.map((c) => (
         <Badge text={c} key={c} />
       ))}
     </div>
@@ -24,7 +34,7 @@ function MyRaceDay({ day }: MyRaceDayProps) {
   return day.races.length == 0 ? (
     <div className="italic">No races announced yet.</div>
   ) : (
-    day.races.map((r) => <MyRaceMeeting key={r.location} meeting={r} />)
+    day.races.map((r) => <MyRaceMeeting key={r.location} race={r} />)
   );
 }
 

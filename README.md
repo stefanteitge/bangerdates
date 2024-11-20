@@ -14,3 +14,8 @@ Open [http://localhost:3000/bangerdates](http://localhost:3000) with your browse
 ## Deployment
 
 It is continously deployed to [https://stefanteitge.github.io/bangerdates/](https://stefanteitge.github.io/bangerdates/).
+
+## References
+
+* https://www.freecodecamp.org/news/how-to-deploy-next-js-app-to-github-pages/
+* https://github.com/hampusborgos/country-flags
