@@ -1,4 +1,4 @@
-import { expandClassTag, getClassColor } from '@/app/lib/classes';
+import { Badge } from '@/app/lib/badge';
 import { listArchivedRaceDays, listUpcomingRaceDays, RaceDay, RaceMeeting } from '@/app/lib/dates';
 import { getFlagCode } from '@/app/lib/locations';
 import { addBasePath } from 'next/dist/client/add-base-path';
@@ -32,7 +32,7 @@ function MyRaceMeeting({ race }: MyDateProps) {
   );
 }
 
-function MyRaceDayRow({ day }: MyRaceDayProps) {
+function RaceDayRow({ day }: MyRaceDayProps) {
   return (
     <tr key={day.date.toLocaleString()}>
       <td className="border bg-slate-50 p-2">{day.date.toLocaleString()}</td>
@@ -48,16 +48,6 @@ function MyRaceDayRow({ day }: MyRaceDayProps) {
   );
 }
 
-function Badge({ text }: { text: string }) {
-  return (
-    <span
-      className={`${getClassColor(text)} mr-2 mt-1 inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-500/10`}
-    >
-      {expandClassTag(text)}
-    </span>
-  );
-}
-
 function RaceTable({ days }: { days: RaceDay[] }) {
   return (
     <table className="table-auto border-collapse">
@@ -70,7 +60,7 @@ function RaceTable({ days }: { days: RaceDay[] }) {
       </thead>
       <tbody>
         {days.map((d) => (
-          <MyRaceDayRow key={d.date.toString()} day={d} />
+          <RaceDayRow key={d.date.toString()} day={d} />
         ))}
       </tbody>
     </table>

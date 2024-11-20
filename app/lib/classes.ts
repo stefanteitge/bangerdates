@@ -18,18 +18,3 @@ export function expandClassTag(tag: string): string {
 
   return tag;
 }
-
-export function getClassColor(tag: string): string {
-  switch (tag) {
-    case 'banger':
-      return 'bg-red-100';
-    case 'alloy':
-      return 'bg-red-200';
-    case 'f1':
-      return 'bg-orange-100';
-    case 'f2':
-      return 'bg-orange-100';
-  }
-
-  return 'bg-gray-100';
-}
