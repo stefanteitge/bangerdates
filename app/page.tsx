@@ -22,10 +22,12 @@ function MyRaceMeeting({ race }: MyDateProps) {
         height={24}
         alt="Flag"
       />{' '}
-      <div className="inline-block min-w-24">{race.location} </div>
-      {race.classes.map((c) => (
-        <Badge text={c} key={c} />
-      ))}
+      <div className="mr-1 inline-block sm:min-w-24">{race.location} </div>
+      <div className="sm:inline-block">
+        {race.classes.map((c) => (
+          <Badge text={c} key={c} />
+        ))}
+      </div>
     </div>
   );
 }
@@ -49,7 +51,7 @@ function MyRaceDayRow({ day }: MyRaceDayProps) {
 function Badge({ text }: { text: string }) {
   return (
     <span
-      className={`${getClassColor(text)} ml-2 inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-500/10`}
+      className={`${getClassColor(text)} mr-2 mt-1 inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-500/10`}
     >
       {expandClassTag(text)}
     </span>
@@ -86,7 +88,7 @@ export default function Home() {
         <h2 className="text-3xl font-extrabold">Archived races</h2>
         <RaceTable days={listArchivedRaceDays()} />
       </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-8 text-slate-600">
+      <footer className="row-start-3 mt-8 flex flex-wrap items-center justify-center gap-8 text-slate-600">
         <span>Made by Stefan Teitge</span>
         <span>2024</span>
         <a href="https://github.com/stefanteitge/bangerdates">Contribute at Github</a>
