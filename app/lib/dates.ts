@@ -88,6 +88,41 @@ export function getRaces(): RaceMeeting[] {
       location: 'Venray',
       classes: ['banger', 'micra'],
     },
+    {
+      date: new Temporal.PlainDate(2025, 2, 2),
+      location: 'Branst',
+      classes: ['banger'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 3, 16),
+      location: 'Branst',
+      classes: ['banger'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 4, 6),
+      location: 'Branst',
+      classes: ['banger'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 9, 14),
+      location: 'Branst',
+      classes: ['banger'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 10, 5),
+      location: 'Branst',
+      classes: ['banger'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 11, 16),
+      location: 'Branst',
+      classes: ['banger'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 12, 14),
+      location: 'Branst',
+      classes: ['banger'],
+    },
   ];
 }
 
