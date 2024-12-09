@@ -79,6 +79,11 @@ export function getRaces(): RaceMeeting[] {
       classes: ['f1'],
     },
     {
+      date: new Temporal.PlainDate(2025, 1, 5),
+      location: 'Venray',
+      classes: ['f1'],
+    },
+    {
       date: new Temporal.PlainDate(2025, 1, 12),
       location: 'Marrum',
       classes: ['banger', 'f1'],
@@ -89,9 +94,19 @@ export function getRaces(): RaceMeeting[] {
       classes: ['banger', 'micra'],
     },
     {
+      date: new Temporal.PlainDate(2025, 1, 26),
+      location: 'Lobith',
+      classes: ['f1'],
+    },
+    {
       date: new Temporal.PlainDate(2025, 2, 2),
       location: 'Branst',
       classes: ['banger'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 2, 9),
+      location: 'Marrum',
+      classes: ['f1'],
     },
     {
       date: new Temporal.PlainDate(2025, 2, 16),
@@ -99,9 +114,29 @@ export function getRaces(): RaceMeeting[] {
       classes: ['f1'],
     },
     {
+      date: new Temporal.PlainDate(2025, 2, 22),
+      location: 'Lobith',
+      classes: ['f1'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 3, 9),
+      location: 'Marrum',
+      classes: ['f1'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 3, 16),
+      location: 'Venray',
+      classes: ['f1'],
+    },
+    {
       date: new Temporal.PlainDate(2025, 3, 16),
       location: 'Branst',
       classes: ['banger'],
+    },
+    {
+      date: new Temporal.PlainDate(2025, 4, 6),
+      location: 'Marrum',
+      classes: ['f1'],
     },
     {
       date: new Temporal.PlainDate(2025, 4, 6),
