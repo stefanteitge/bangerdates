@@ -1,6 +1,6 @@
-import { Badge } from '@/app/lib/badge';
-import { RaceDay, RaceMeeting } from '@/app/lib/dates';
-import Flag from '@/app/lib/flag';
+import { Badge } from '@/app/lib/ui/badge';
+import Flag from '@/app/lib/ui/flag';
+import { RaceDay, RaceMeeting } from '../types';
 
 function LocationCell({ race }: { race: RaceMeeting }) {
   return (

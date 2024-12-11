@@ -1,4 +1,4 @@
-import { RaceMeeting } from '@/app/lib/dates';
+import { RaceMeeting } from '@/app/lib/race-repository';
 import { getFlagCode } from '@/app/lib/locations';
 import { addBasePath } from 'next/dist/client/add-base-path';
 import Image from 'next/image';

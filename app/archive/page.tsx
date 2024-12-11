@@ -1,8 +1,9 @@
 'use client';
 
-import { listArchivedRaceDays, RaceDay } from '@/app/lib/dates';
-import RaceTable from '@/app/lib/race-table';
+import { listArchivedRaceDays } from '@/app/lib/race-repository';
+import RaceTable from '@/app/lib/ui/race-table';
 import { useEffect, useState } from 'react';
+import { RaceDay } from '../lib/types';
 
 export default function Home() {
   const [data2, setData2] = useState(Array<RaceDay>);

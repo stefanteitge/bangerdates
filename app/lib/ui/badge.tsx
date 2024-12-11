@@ -1,4 +1,4 @@
-import { expandClassTag } from '@/app/lib/classes';
+import { getClassNameById } from '@/app/lib/class-repository';
 
 function getClassName(text: string): string {
   // TODO: make text a key
@@ -6,5 +6,5 @@ function getClassName(text: string): string {
 }
 
 export function Badge({ text }: { text: string }) {
-  return <span className={`${getClassName(text)} badge`}>{expandClassTag(text)}</span>;
+  return <span className={`${getClassName(text)} badge`}>{getClassNameById(text)}</span>;
 }
