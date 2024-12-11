@@ -1,15 +1,15 @@
 'use client';
 
-import { listUpcomingRaceDays } from '@/app/lib/race-repository';
+import { listUpcomingRaceDays2 } from '@/app/lib/race-repository';
 import { useEffect, useState } from 'react';
-import { RaceDay } from './lib/types';
+import { RaceDay, RaceDay2 } from './lib/types';
 import RaceList from './lib/ui/race-list';
 
 export default function Home() {
-  const [data, setData] = useState(Array<RaceDay>);
+  const [data, setData] = useState(Array<RaceDay2>);
 
   useEffect(() => {
-    setData(listUpcomingRaceDays());
+    setData(listUpcomingRaceDays2());
   }, []);
 
   return (

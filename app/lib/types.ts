@@ -11,6 +11,11 @@ export interface RaceDay {
   races: RaceMeeting[];
 }
 
+export interface RaceDay2 {
+  date: Temporal.PlainDate;
+  race: RaceMeeting | null;
+}
+
 export interface RaceClass {
   id: string;
   name: string;
