@@ -5,8 +5,8 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 
 export default function Nav() {
   return (
-    <div className="fixed left-0 top-0 flex h-full w-full items-center justify-center">
-      <div className="fixed bottom-4 mx-auto rounded bg-slate-300 p-2 shadow-md">
+    <div className="fixed left-0 top-0 flex w-full items-center justify-center">
+      <div className="fixed bottom-4 rounded bg-slate-400 p-2 ring-1 ring-slate-500">
         <Link className="p-2" href="/">
           <HomeOutlinedIcon fontSize="large" />
         </Link>

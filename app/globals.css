@@ -14,8 +14,12 @@ body {
 }
 
 @layer components{
+  .content {
+    @apply items-start grid min-h-screen grid-rows-[20px_1fr_20px] justify-items-center gap-0 p-4 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20 min-w-96;
+  }
+
   .badge {
-    @apply mr-2 mt-1 inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-gray-500/10 bg-gray-100;
+    @apply inline-flex items-center rounded-md px-2 py-1 text-xs font-medium text-gray-700 ring-1 ring-inset ring-slate-700/10 bg-gray-100;
 
     &.badge-banger {
       @apply bg-red-100;
