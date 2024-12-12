@@ -2,11 +2,11 @@
 
 import { listArchivedRaceDays2 } from '@/app/lib/race-repository';
 import { useEffect, useState } from 'react';
-import { RaceDay } from '../lib/types';
+import { RaceDay2 } from '../lib/types';
 import RaceList from '../lib/ui/race-list';
 
 export default function Home() {
-  const [data, setData] = useState(Array<RaceDay>);
+  const [data, setData] = useState(Array<RaceDay2>);
 
   useEffect(() => {
     setData(listArchivedRaceDays2());
