@@ -6,6 +6,9 @@ export interface RaceMeeting {
   classes: string[];
 }
 
+/**
+ * @deprecated The interface should not be used.
+ */
 export interface RaceDay {
   date: Temporal.PlainDate;
   races: RaceMeeting[];

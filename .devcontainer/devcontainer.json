@@ -2,7 +2,14 @@
   "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
   "customizations": {
     "vscode": {
-        "extensions": ["bradlc.vscode-tailwindcss"]
+      "extensions": [
+        "bradlc.vscode-tailwindcss"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
     }
   }
 }
