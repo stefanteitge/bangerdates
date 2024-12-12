@@ -2,7 +2,7 @@
 
 import { listUpcomingRaceDays2 } from '@/app/lib/race-repository';
 import { useEffect, useState } from 'react';
-import { RaceDay, RaceDay2 } from './lib/types';
+import { RaceDay2 } from './lib/types';
 import RaceList from './lib/ui/race-list';
 
 export default function Home() {

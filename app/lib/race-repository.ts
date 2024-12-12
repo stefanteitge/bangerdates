@@ -59,7 +59,7 @@ function listRaceDays2(): RaceDay2[] {
     nextSunday.add(Temporal.Duration.from({ days: 7 })),
     nextSunday.add(Temporal.Duration.from({ days: 14 })),
     nextSunday.add(Temporal.Duration.from({ days: 21 })),
-    nextSunday.add(Temporal.Duration.from({ days: 28 }))
+    nextSunday.add(Temporal.Duration.from({ days: 28 })),
   ];
 
   const days = getRaces().map((r) => <RaceDay2>{ date: r.date, race: r });
