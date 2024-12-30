@@ -139,6 +139,11 @@ export function getRaces(): RaceMeeting[] {
       classes: ['banger'],
     },
     {
+      date: new Temporal.PlainDate(2025, 7, 11),
+      location: 'Marrum',
+      classes: ['banger'],
+    },
+    {
       date: new Temporal.PlainDate(2025, 9, 14),
       location: 'Branst',
       classes: ['banger'],
