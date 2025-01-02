@@ -1,7 +1,12 @@
 import { Temporal } from 'temporal-polyfill';
 import { RaceMeeting } from '../types';
+import { getRacesInRonse } from './races-ronse';
 
 export function getRaces(): RaceMeeting[] {
+  return [...getOtherRaces(), ...getRacesInRonse()];
+}
+
+function getOtherRaces(): RaceMeeting[] {
   return [
     {
       date: new Temporal.PlainDate(2024, 10, 20),
@@ -12,11 +17,6 @@ export function getRaces(): RaceMeeting[] {
       date: new Temporal.PlainDate(2024, 10, 26),
       location: 'Lobith',
       classes: ['f1'],
-    },
-    {
-      date: new Temporal.PlainDate(2024, 10, 27),
-      location: 'Ronse',
-      classes: ['banger', 'caravan'],
     },
     {
       date: new Temporal.PlainDate(2024, 11, 3),
@@ -32,11 +32,6 @@ export function getRaces(): RaceMeeting[] {
       date: new Temporal.PlainDate(2024, 11, 9),
       location: 'Lobith',
       classes: ['f1'],
-    },
-    {
-      date: new Temporal.PlainDate(2024, 11, 17),
-      location: 'Ronse',
-      classes: ['banger', 'swb'],
     },
     {
       date: new Temporal.PlainDate(2024, 11, 17),

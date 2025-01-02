@@ -5,6 +5,7 @@
   "semi": true,
   "bracketSpacing": true,
   "tabWidth": 2,
+  "useTabs": false,
   "printWidth": 100,
   "plugins": [
     "prettier-plugin-tailwindcss"

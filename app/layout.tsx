@@ -15,7 +15,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Banger dates',
+  title: 'RC Banger and Stock Car Dates',
   description: 'Just banger dates. And maybe some stock car dates too.',
 };
 
