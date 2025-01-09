@@ -76,7 +76,7 @@ function getOtherRaces(): RaceMeeting[] {
     {
       date: new Temporal.PlainDate(2025, 1, 12),
       location: 'Marrum',
-      classes: ['banger', 'f1'],
+      classes: ['banger'],
     },
     {
       date: new Temporal.PlainDate(2025, 1, 25),
