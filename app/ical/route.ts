@@ -3,7 +3,7 @@ import ical, { ICalCalendarMethod } from 'ical-generator';
 export const dynamic = 'force-static';
 
 export async function GET() {
-  const calendar = ical({ name: 'Banger dates' });
+  const calendar = ical({ name: 'RC Banger and Stock Car Dates' });
 
   const raceDays = [...listUpcomingRaceDays2(), ...listArchivedRaceDays2()];
 
