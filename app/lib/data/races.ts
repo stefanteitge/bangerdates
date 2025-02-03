@@ -1,9 +1,10 @@
 import { Temporal } from 'temporal-polyfill';
 import { RaceMeeting } from '../types';
 import { getRacesInRonse } from './races-ronse';
+import { getRacesInMarrum } from './races-marrum';
 
 export function getRaces(): RaceMeeting[] {
-  return [...getOtherRaces(), ...getRacesInRonse()];
+  return [...getOtherRaces(), ...getRacesInRonse(), ...getRacesInMarrum()];
 }
 
 function getOtherRaces(): RaceMeeting[] {
@@ -34,11 +35,6 @@ function getOtherRaces(): RaceMeeting[] {
       classes: ['f1'],
     },
     {
-      date: new Temporal.PlainDate(2024, 11, 17),
-      location: 'Marrum',
-      classes: ['banger'],
-    },
-    {
       date: new Temporal.PlainDate(2024, 12, 1),
       location: 'Branst',
       classes: ['banger', 'alloy'],
@@ -46,11 +42,6 @@ function getOtherRaces(): RaceMeeting[] {
     {
       date: new Temporal.PlainDate(2024, 12, 8),
       location: 'Lobith',
-      classes: ['f1'],
-    },
-    {
-      date: new Temporal.PlainDate(2024, 12, 15),
-      location: 'Marrum',
       classes: ['f1'],
     },
     {
@@ -74,11 +65,6 @@ function getOtherRaces(): RaceMeeting[] {
       classes: ['banger', 'caravan'],
     },
     {
-      date: new Temporal.PlainDate(2025, 1, 12),
-      location: 'Marrum',
-      classes: ['banger'],
-    },
-    {
       date: new Temporal.PlainDate(2025, 1, 25),
       location: 'Venray',
       classes: ['banger', 'micra'],
@@ -94,11 +80,6 @@ function getOtherRaces(): RaceMeeting[] {
       classes: ['banger'],
     },
     {
-      date: new Temporal.PlainDate(2025, 2, 9),
-      location: 'Marrum',
-      classes: ['f1'],
-    },
-    {
       date: new Temporal.PlainDate(2025, 2, 16),
       location: 'Venray',
       classes: ['f1'],
@@ -107,11 +88,6 @@ function getOtherRaces(): RaceMeeting[] {
       date: new Temporal.PlainDate(2025, 2, 22),
       location: 'Lobith',
       classes: ['f1', 'banger'],
-    },
-    {
-      date: new Temporal.PlainDate(2025, 3, 9),
-      location: 'Marrum',
-      classes: ['f1'],
     },
     {
       date: new Temporal.PlainDate(2025, 3, 16),
@@ -125,17 +101,7 @@ function getOtherRaces(): RaceMeeting[] {
     },
     {
       date: new Temporal.PlainDate(2025, 4, 6),
-      location: 'Marrum',
-      classes: ['f1'],
-    },
-    {
-      date: new Temporal.PlainDate(2025, 4, 6),
       location: 'Branst',
-      classes: ['banger'],
-    },
-    {
-      date: new Temporal.PlainDate(2025, 7, 11),
-      location: 'Marrum',
       classes: ['banger'],
     },
     {
