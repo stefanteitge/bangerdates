@@ -3,7 +3,7 @@ export function getFlagCode(locationName: string): string {
     return 'be';
   }
 
-  if (locationName == 'Marrum' || locationName == 'Lobith' || locationName == 'Venray') {
+  if (locationName == 'Marrum' || locationName == 'Lobith' || locationName == 'Venray' || locationName == 'Hengelo') {
     return 'nl';
   }
 

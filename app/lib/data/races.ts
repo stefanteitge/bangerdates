@@ -61,14 +61,19 @@ function getOtherRaces(): RaceMeeting[] {
       classes: ['f1'],
     },
     {
+      date: new Temporal.PlainDate(2025, 3, 2),
+      location: 'Branst',
+      classes: ['banger'],
+    },
+    {
       date: new Temporal.PlainDate(2025, 3, 16),
       location: 'Venray',
       classes: ['f1'],
     },
     {
-      date: new Temporal.PlainDate(2025, 3, 2),
-      location: 'Branst',
-      classes: ['banger'],
+      date: new Temporal.PlainDate(2025, 3, 30),
+      location: 'Hengelo',
+      classes: ['banger', 'alloy'],
     },
     {
       date: new Temporal.PlainDate(2025, 4, 6),
