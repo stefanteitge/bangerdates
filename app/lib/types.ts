@@ -6,6 +6,12 @@ export interface RaceMeeting {
   classes: string[];
 }
 
+export interface RaceMeeting2 {
+  date: Temporal.PlainDate;
+  location: string;
+  classes: RaceClass[];
+}
+
 /**
  * @deprecated The interface should not be used.
  */
@@ -16,7 +22,7 @@ export interface RaceDay {
 
 export interface RaceDay2 {
   date: Temporal.PlainDate;
-  race: RaceMeeting | null;
+  race: RaceMeeting2 | null;
 }
 
 export interface RaceClass {

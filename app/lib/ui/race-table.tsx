@@ -8,7 +8,7 @@ function LocationCell({ race }: { race: RaceMeeting }) {
       <Flag race={race} /> <div className="mr-1 inline-block sm:min-w-24">{race.location} </div>
       <div className="sm:inline-block">
         {race.classes.map((c) => (
-          <Badge text={c} key={c} />
+          <Badge clazz={c} key={c} />
         ))}
       </div>
     </div>

@@ -1,11 +1,12 @@
 import getClasses from './data/classes';
+import { RaceClass } from '@/app/lib/types';
 
-export function getClassNameById(classId: string): string {
+export function getClassNameById(classId: string): RaceClass {
   const clazz = getClasses().find((c) => c.id == classId);
 
   if (clazz) {
-    return clazz.name;
+    return clazz;
   }
 
-  return 'Unknown';
+  return { id: classId, name: 'Unknown' };
 }

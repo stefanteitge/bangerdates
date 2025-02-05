@@ -2,9 +2,10 @@ import { Temporal } from 'temporal-polyfill';
 import { RaceMeeting } from '../types';
 import { getRacesInRonse } from './races-ronse';
 import { getRacesInMarrum } from './races-marrum';
+import { getRacesInLobith } from '@/app/lib/data/races-lobith';
 
 export function getRaces(): RaceMeeting[] {
-  return [...getOtherRaces(), ...getRacesInRonse(), ...getRacesInMarrum()];
+  return [...getOtherRaces(), ...getRacesInRonse(), ...getRacesInMarrum(), ...getRacesInLobith()];
 }
 
 function getOtherRaces(): RaceMeeting[] {
@@ -12,11 +13,6 @@ function getOtherRaces(): RaceMeeting[] {
     {
       date: new Temporal.PlainDate(2024, 10, 20),
       location: 'Venray',
-      classes: ['f1'],
-    },
-    {
-      date: new Temporal.PlainDate(2024, 10, 26),
-      location: 'Lobith',
       classes: ['f1'],
     },
     {
@@ -30,29 +26,14 @@ function getOtherRaces(): RaceMeeting[] {
       classes: ['banger'],
     },
     {
-      date: new Temporal.PlainDate(2024, 11, 9),
-      location: 'Lobith',
-      classes: ['f1'],
-    },
-    {
       date: new Temporal.PlainDate(2024, 12, 1),
       location: 'Branst',
       classes: ['banger', 'alloy'],
     },
     {
-      date: new Temporal.PlainDate(2024, 12, 8),
-      location: 'Lobith',
-      classes: ['f1'],
-    },
-    {
       date: new Temporal.PlainDate(2024, 12, 28),
       location: 'Venray',
       classes: ['banger', 'micra'],
-    },
-    {
-      date: new Temporal.PlainDate(2024, 12, 29),
-      location: 'Lobith',
-      classes: ['f1'],
     },
     {
       date: new Temporal.PlainDate(2025, 1, 5),
@@ -70,11 +51,6 @@ function getOtherRaces(): RaceMeeting[] {
       classes: ['banger', 'micra'],
     },
     {
-      date: new Temporal.PlainDate(2025, 1, 26),
-      location: 'Lobith',
-      classes: ['f1'],
-    },
-    {
       date: new Temporal.PlainDate(2025, 2, 2),
       location: 'Branst',
       classes: ['banger'],
@@ -83,11 +59,6 @@ function getOtherRaces(): RaceMeeting[] {
       date: new Temporal.PlainDate(2025, 2, 16),
       location: 'Venray',
       classes: ['f1'],
-    },
-    {
-      date: new Temporal.PlainDate(2025, 2, 22),
-      location: 'Lobith',
-      classes: ['f1', 'banger'],
     },
     {
       date: new Temporal.PlainDate(2025, 3, 16),

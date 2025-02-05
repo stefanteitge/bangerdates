@@ -18,7 +18,7 @@ function RaceDayRow({ day }: { day: RaceDay2 }) {
         ) : (
           <div className="flex flex-row gap-1">
             {day.race.classes.map((c) => (
-              <Badge text={c} key={c} />
+              <Badge clazz={c} key={c.id} />
             ))}
           </div>
         )}

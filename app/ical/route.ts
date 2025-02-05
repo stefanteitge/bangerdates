@@ -12,7 +12,7 @@ export async function GET() {
     .forEach((r) => {
       calendar.createEvent({
         start: r.date.toLocaleString(),
-        summary: 'Race in ' + r.race?.location,
+        summary: r.race?.classes.map((c) => c.name).join(', ') + ' in ' + r.race?.location,
         location: r.race?.location,
         allDay: true,
       });
