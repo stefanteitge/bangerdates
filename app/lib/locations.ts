@@ -3,10 +3,9 @@ export function getFlagCode(locationName: string): string {
     return 'be';
   }
 
-  if (locationName == 'Marrum'
-    || locationName == 'Lobith'
-    || locationName == 'Venray'
-    || locationName == 'Hengelo') {
+  const nl = ['Marrum', 'Lobith', 'Venray', 'Hengelo'];
+
+  if (nl.find((loc) => loc == locationName)) {
     return 'nl';
   }
 
