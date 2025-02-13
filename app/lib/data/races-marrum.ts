@@ -26,7 +26,7 @@ export function getRacesInMarrum(): RaceMeeting[] {
     {
       date: new Temporal.PlainDate(2025, 3, 8),
       location: 'Marrum',
-      classes: ['f1'],
+      classes: ['f1', 'banger'],
     },
     {
       date: new Temporal.PlainDate(2025, 3, 9),
