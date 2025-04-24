@@ -81,6 +81,11 @@ function getOtherRaces(): RaceMeeting[] {
       classes: ['banger'],
     },
     {
+      date: new Temporal.PlainDate(2025, 5, 18),
+      location: 'Hengelo',
+      classes: ['banger', 'alloy'],
+    },
+    {
       date: new Temporal.PlainDate(2025, 9, 14),
       location: 'Branst',
       classes: ['banger'],
